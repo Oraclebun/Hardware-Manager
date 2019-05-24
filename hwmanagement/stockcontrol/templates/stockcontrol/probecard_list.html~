@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>ProbeCard List</h1>
+  {% if probecard_list %}
+  <ul>
+    {% for probecard in probecard_list %}
+      <li>
+        <a href="{{ probecard.get_absolute_url }}">{{ probecard.probecard_id }}</a> ({{probecard.device_name}}) {{ probecard.pk}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no probecards in hardware control.</p>
+  {% endif %}       
+{% endblock %}

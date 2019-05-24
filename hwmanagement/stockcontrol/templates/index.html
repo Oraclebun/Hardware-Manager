@@ -1,0 +1,63 @@
+{% extends "base_generic.html" %}
+
+{% load static %}
+
+{% block title %}
+<title> STATS Chippac Hardware Management</title>
+{% endblock %}
+
+{% block content %}
+<link rel = "stylesheet" type = "text/css" href = "{% static 'stockcontrol/style.css' %}">
+ 
+<div>
+<h1>STATS ProbeCard Report Home</h1>
+  <p>Welcome to Cirrus Touchdown Report, a website developed by <em>Neo Network</em>!</p>
+  <h2>Dynamic content</h2>
+<p>The report has the following records:</p>
+</div>
+
+<div>
+<table id="table1">
+  <strong>ProbeCards Last 5 Editted:</strong>
+  <thead>
+    <tr>
+      <th id="ProbeCard">ProbeCard</th>
+      <th id="RebuildNum">Rebuild Num</th>
+      <th id="DateEditted">Date Editted</th>
+    </tr>
+  </thead>
+    <tbody>
+      {% for pc in last_editted %}
+      <tr>
+        <td headers="ProbeCard"> {{ pc.probecard }}</td>
+	<td headers="Rebuild Num"> {{ pc.probehead_rebuild_num }} </td>
+	<td headers="Date Editted">  {{pc.date_added}} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+</div>
+<hr>
+<div>
+<table id="table2">
+  <strong>ProbeCard Editted in Past Week</strong>
+  <thead>
+    <tr>
+      <th id="ProbeCard">ProbeCard</th>
+      <th id="RebuildNum">Rebuild Num</th>
+      <th id="Remarks">Remarks</th>
+    </tr>
+  </thead>
+    <tbody>
+      {% for pc in editted_recently %}
+      <tr>
+      <td headers="ProbeCard"> {{ pc.probecard }}</td>
+	  <td headers="Rebuild Num"> {{ pc.probehead_rebuild_num }} </td>
+	  <td headers="Date Editted">  {{pc.remarks}} </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

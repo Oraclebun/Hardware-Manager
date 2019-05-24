@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>You are currently editting:</h1>
+  <h3>{{ probecardreport.probecard.probecard_id }}</h3>
+  <h3>Device Num: {{ probecardreport.probecard.device_num }}</h3>
+  <h3>Device Group: {{ probecardreport.probecard.device_name }}</h3>
+  <h3>Rebuild Num: {{ probecardreport.probehead_rebuild_num}}</h3>
+
+  <hr>
+  <form method="post" action = "">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

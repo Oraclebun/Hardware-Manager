@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>ProbeCard: {{ probecard.probecard_id }}</h1>
+
+  <p><strong>ID:</strong> <a href="">{{ probecard.probecard_id }}</a></p>
+  <p><strong>Device Number:</strong> {{ probecard.device_num }}</p>
+  <p><strong>Device Name:</strong> {{ probecard.device_name }}</p> 
+<p><strong>Austin Serial Number:</strong> {{ probecard.aus_serial_num }}</p>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Rebuild instances</h4>
+    
+    {% for testboard in probecard.probecardreport_set.all %}
+        <hr>
+        <p><strong>Rebuild Number:</strong> {{testboard.probehead_rebuild_num}} </p>
+    <p><strong>Remarks:</strong> {{testboard.remarks}}</p>
+    <p><strong>Status by Remarks:</strong> {{testboard.status_log}}</p>
+    <p><strong>Functional Status:</strong> {{testboard.status_pc}}</p>
+    <p><strong>Production Status:</strong> {{testboard.status_prod}}</p>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+import datetime
+
+from django import forms
+from django.core.exceptions import ValidationError
+from django.utils.translation import ugettext_lazy as _
+
+from .models import ProbeCardReport
+
+class ProbeCardReportForm(forms.ModelForm):
+    class Meta:
+        model = ProbeCardReport
+        exclude = ('date_added',)
+
+
+class SelecProbeCardModelForm(ModelForm):
+
+    class Meta:
+        model = BookInstance
+        fields = ['probecard']
+        labels = {'due_back': _('Renewal dat
+        help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')}

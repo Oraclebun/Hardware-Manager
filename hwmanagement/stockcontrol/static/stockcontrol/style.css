@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css?family=Delius);
+
+h1,h2 {
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+h3,h4 {
+    font-family: "Delius";
+    color: #6F4E37;
+}
+    
+p {
+    font-family: Comic Sans MS, sans-serif;
+    color: #000080;
+}
+
+li {
+    font-family: Comic Sans MS, sans-serif;
+    color: #556B2F;
+}
+
+li a {
+    font-family: Comic Sans MS, sans-serif;
+    color : #F08080;
+}
+
+sidebar-nav{
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 2px solid rgb(190,190,190);
+  padding: 3px 3px;
+  font-family: Delius;
+  color: #000000;
+}
+
+th {
+    background-color: #B0C4DE;
+}
+
+td {
+    text-align: center;
+}
+
+.b1 {border-bottom-style: double;
+    }
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}
+
+<style>
+
+.btn-block{
+  background-color: #B0C4DE; /* Blue background */
+  border: 1px solid black; /* Blue border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  font-size : 30px;
+}
+
+.btn-group-vertical .btn-block:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-block:hover {
+  background-color: #B0C4DE;
+}
+
+.btn-block {border-radius: 30px;}
+
+}
+
+</style>
+
