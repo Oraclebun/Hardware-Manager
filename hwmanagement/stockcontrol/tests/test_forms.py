@@ -151,29 +151,7 @@ class PCInstanceFormTest(TestData):
                 'iqa_date' : date,
                 'author' : user2,
             })
-#        self.assertTrue(form.is_valid())
 
-#    def test_form_measured_date_today(self):
-#        pc = self.probecard
-#        pcrecord = self.pcrecord
-#        date = datetime.date.today()
-#        print(pcrecord.author.pk)
-#        form = PCInstanceForm(data = {
-#            'probecard' : pc.pk,
-#            'probehead_num' : pcrecord.probehead_num,
-#            'date_measured' : date,
-#            'tip_length' : pcrecord.tip_length,
-#            'crown_height': pcrecord.crown_height,
-#            'probehead_touchdown' : pcrecord.probehead_touchdown,
-#            'pcb_touchdown' : pcrecord.pcb_touchdown,
-#            'iqa_date' : date,
-#            'iqa_tip_length' : pcrecord.iqa_tip_length,
-#            'crown_iqa_height' : pcrecord.crown_iqa_height,
-#            'remarks' : pcrecord.remarks,
-#            'author' : pcrecord.author.pk,
-#            'status_log': pcrecord.status_log,
-#        }, initial = {'author' : pcrecord.author.pk})
-#        self.assertTrue(form.is_valid())
 
     
 

@@ -1,7 +1,0 @@
-{% extends "base_generic.html" %}
-
-{% block content %}
-<h1> Record is successfully created/updated ~ </h1>
-<h3> Back to <a href = "{ url 'tasks' %}">Tasks </a></h3>
-
-{% endblock %}
